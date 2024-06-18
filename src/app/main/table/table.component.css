@@ -1,4 +1,5 @@
 .container{
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -6,4 +7,18 @@
 .commessa-attivita{
     display: flex;
     flex-direction: row;
+}
+
+.commessa-attivita{
+    min-width: 30%;
+    flex: 1;
+}
+
+.commessa-attivita h3 {
+    margin: 0;
+}
+
+.week{
+    min-width: 70%;
+    flex: 1;
 }

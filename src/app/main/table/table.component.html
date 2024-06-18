@@ -1,13 +1,13 @@
 <div class="container">
-  <div class="comessa-attivita">
-    <div>
+  <div class="commessa-attivita">
+    <div style="width: 50%;">
       <h3>Cod commessa</h3>
     @for(commessa of JobList; track commessa){
       <div (click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
     }
     </div>
 
-    <div>
+    <div style="width: 50%;">
       <h3>Cod attivita</h3>
       @if(selectedCommessa){
         @for(attivita of JobTaskList; track attivita){
@@ -19,7 +19,8 @@
     </div>
   </div>
 
-    <table>
+  <div class="week">
+    <table style="width: 100%;">
         <thead>
             <tr>
               <th>Monday</th>
@@ -32,4 +33,5 @@
             </tr>
           </thead>
     </table>
+  </div>
 </div>
