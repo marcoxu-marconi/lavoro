@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="info">
+        <h1>Rendiconto lavori</h1>
+        <div>
+            <label for="input">Persona:</label>
+            <input type="text">
+        </div>
+    </div>
+
+    <div class="week-selector">
+        <button (click)="moveToPreviousWeek()">&larr;Previous Week</button>
+        <span>{{ mondayDate | date: 'MMM d' }} - {{ sundayDate | date: 'MMM d' }}</span>
+        <button (click)="moveToNextWeek()">Next Week &rarr; </button>
+      </div>
+</div>
+<hr>

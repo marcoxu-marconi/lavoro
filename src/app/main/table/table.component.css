@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.container table {
+    flex: 1; /* This makes each table grow equally to fill the container */
+    width: 50%; /* Optional: Ensures each table tries to take up half the container's width */
+  }
+
+
+
+
+
+table {
+    border:none;
+    border-collapse: collapse;
+}
+
+table th {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+table th:first-child {
+    border-left: none;
+}
+
+table th:last-child {
+    border-right: none;
+}
+
+  

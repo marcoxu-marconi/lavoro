@@ -1,0 +1,19 @@
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.week-selector{
+    display: flex;
+    align-items: end;
+}
+
+hr{
+    width: 100%;
+    margin-top: 2vh;
+}
