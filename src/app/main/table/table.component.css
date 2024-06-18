@@ -4,11 +4,9 @@
 }
 
 .container table {
-    flex: 1; /* This makes each table grow equally to fill the container */
-    width: 50%; /* Optional: Ensures each table tries to take up half the container's width */
-  }
-
-
+    flex: 1; 
+    width: 50%;
+}
 
 
 

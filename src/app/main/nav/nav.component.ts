@@ -10,19 +10,16 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+
 mondayDate: Date = new Date('1753-01-01');
 sundayDate: Date = new Date('1753-01-07');
 
 
-  moveToNextWeek() {
+  moveToNextWeek():void {
     console.log('moveToNextWeek');
-    /* 
-    mondayDate =
-    sundayDate =
-     */
   }
 
-  moveToPreviousWeek() {
+  moveToPreviousWeek():void {
     console.log('moveToPreviousWeek');
   }
 
