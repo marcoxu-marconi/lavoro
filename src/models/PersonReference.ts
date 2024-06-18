@@ -27,7 +27,30 @@ export class WeekWorkJournal {
     MondayUnits: number = 0;
     MondayUnitOfMesure: string = 'G'; // giorni
     MondayNote: string = '';
-    // Aggiungi altri 6 giorni
+    TuesdayDate: Date = new Date('1753-01-01'); //Martedì
+    TuesdayUnits: number = 0;
+    TuesdayUnitOfMesure: string = 'G'; // giorni
+    TuesdayNote: string = '';
+    WednesdayDate: Date = new Date('1753-01-01'); //Mercoledì
+    WednesdayUnits: number = 0;
+    WednesdayUnitOfMesure: string = 'G'; // giorni
+    WednesdayNote: string = '';
+    ThursdayDate: Date = new Date('1753-01-01'); //Giovedì
+    ThursdayUnits: number = 0;
+    ThursdayUnitOfMesure: string = 'G'; // giorni
+    ThursdayNote: string = '';
+    FridayDate: Date = new Date('1753-01-01'); //Venerdì
+    FridayUnits: number = 0;
+    FridayUnitOfMesure: string = 'G'; // giorni
+    FridayNote: string = '';
+    SaturdayDate: Date = new Date('1753-01-01'); //Sabato
+    SaturdayUnits: number = 0;
+    SaturdayUnitOfMesure: string = 'G'; // giorni
+    SaturdayNote: string = '';
+    SundayDate: Date = new Date('1753-01-01'); //Domenica
+    SundayUnits: number = 0;
+    SundayUnitOfMesure: string = 'G'; // giorni
+    SundayNote: string = '';
 }
 
 export class WorkWeek {

@@ -1,0 +1,68 @@
+{
+    "ResList": [
+      {
+        "PersonRecordId": "AAA-AAA",
+        "Code": "LSO",
+        "Name": "Lorenzo",
+        "Surname": "Soncini",
+        "Type": 1
+      },
+      {
+        "PersonRecordId": "AAA-BBB",
+        "Code": "MXU",
+        "Name": "Marco",
+        "Surname": "Xu",
+        "Type": 6
+      }
+    ],
+    "JobList": [
+      {
+        "JobRecordId": "AAA-AAA",
+        "Code": "ACCA2024",
+        "Name": "Busness Central Accademy 2024"
+      },
+      {
+        "JobRecordId": "AAA-BBB",
+        "Code": "INTRA2024",
+        "Name": "Intranet ZZ Soft 2024"
+      }
+    ],
+    "JobTaskList": [
+      {
+        "JobTaskRecordId": "31925e5d-3e2a-494e-b947-7bef08086e9b",
+        "JobRecordId": "AAA-AAA",
+        "Number": "10000",
+        "Name": "Docenza"
+      },
+      {
+        "JobTaskRecordId": "5d4d45ad-fef3-4a43-8c95-8ff032d2f2b1",
+        "JobRecordId": "AAA-BBB",
+        "Number": "1000",
+        "Name": "Rendicontazione lavoro"
+      },
+      {
+        "JobTaskRecordId": "a835a000-99b0-4aca-947e-79e90a8bd8af",
+        "JobRecordId": "AAA-BBB",
+        "Number": "2000",
+        "Name": "Note spese"
+      },
+      {
+        "JobTaskRecordId": "3381ae54-9827-4b4e-abff-00eadfe130e4",
+        "JobRecordId": "AAA-BBB",
+        "Number": "3000",
+        "Name": "Anagrafica progetti/commesse"
+      },
+      {
+        "JobTaskRecordId": "d59b633c-9b7b-4c39-a761-e475ff4b3f32",
+        "JobRecordId": "AAA-BBB",
+        "Number": "3000",
+        "Name": "Anagrafica persone/risorse"
+      },
+      {
+        "JobTaskRecordId": "6d6a2a9a-78d3-497c-ac02-e3aca8c5c249",
+        "JobRecordId": "AAA-BBB",
+        "Number": "4000",
+        "Name": "Presenze del personale"
+      }
+    ]
+  }
