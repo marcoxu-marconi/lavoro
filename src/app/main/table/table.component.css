@@ -1,31 +1,9 @@
 .container{
     display: flex;
-    width: 100%;
+    justify-content: space-evenly;
 }
 
-/* .container table {
-    flex: 1; 
-    width: 50%;
+.commessa-attivita{
+    display: flex;
+    flex-direction: row;
 }
- */
-
-
-table {
-    border:none;
-    border-collapse: collapse;
-}
-
-table th {
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-}
-
-table th:first-child {
-    border-left: none;
-}
-
-table th:last-child {
-    border-right: none;
-}
-
-  

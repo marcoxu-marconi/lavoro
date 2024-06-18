@@ -1,26 +1,24 @@
 <div class="container">
+  <div class="comessa-attivita">
+    <div>
+      <h3>Cod commessa</h3>
+    @for(commessa of JobList; track commessa){
+      <div (click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
+    }
+    </div>
 
-  <div>
-    <h3>Cod commessa</h3>
-  @for(commessa of JobList; track commessa){
-    <div (click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
-  }
-  
-  
-  </div>
-
-  <div>
-    <h3>Cod attivita</h3>
-    @if(selectedCommessa){
-      @for(attivita of JobTaskList; track attivita){
-        @if(attivita.JobRecordId == selectedCommessa.JobRecordId){
-          <div>{{attivita.Name}}</div>
+    <div>
+      <h3>Cod attivita</h3>
+      @if(selectedCommessa){
+        @for(attivita of JobTaskList; track attivita){
+          @if(attivita.JobRecordId == selectedCommessa.JobRecordId){
+            <div>{{attivita.Name}}</div>
+          }
         }
       }
-
-    }
+    </div>
   </div>
-  
+
     <table>
         <thead>
             <tr>
@@ -34,4 +32,4 @@
             </tr>
           </thead>
     </table>
-  </div>
+</div>
