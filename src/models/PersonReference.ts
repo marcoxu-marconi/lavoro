@@ -18,6 +18,8 @@ export class PersonReference {
     Type: number = 0;
 }
 
+
+//forse unpo di errore qua
 export class WeekWorkJournal {
     WeekWorkJournalRecordId: string = '';
     JobRecordId: string = '';
