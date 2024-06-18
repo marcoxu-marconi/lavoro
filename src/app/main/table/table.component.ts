@@ -14,6 +14,12 @@ export class TableComponent {
   JobList: any = [];
   JobTaskList: any = [];
 
+  selectedCommessa:any;
+
+  selectCommessa(commessa:any):void{
+    this.selectedCommessa=commessa;
+  }
+
   ngOnInit() {
     this.infoService.getResList().subscribe(data => {
       this.resList = data;
