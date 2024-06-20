@@ -20,7 +20,7 @@
   </div>
 
   <div class="week">
-    <table style="width: 100%;">
+    <table style="width: 100%; text-align: center; table-layout: fixed;">
         <thead>
             <tr>
               <th>Monday</th>
@@ -34,7 +34,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>adasd</td>
+              <td (click)="modal()">adasds</td>
               <td>adasd</td>
               <td>adasd</td>
               <td>adasd</td>
@@ -43,3 +43,19 @@
     </table>
   </div>
 </div>
+
+
+<dialog #dialog>
+  <div class="dialog-content-up">
+    <h2>Data</h2>
+    <form>
+      <textarea placeholder="Write your note here"></textarea>
+    </form>
+  </div>
+  
+  <div class="dialog-content-bottom">
+    <button (click)="dialog.close()">OK</button>
+  </div>
+</dialog>
+
+<button (click)="dialog.showModal()">Show dialog</button>

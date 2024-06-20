@@ -16,8 +16,16 @@ export class TableComponent {
 
   selectedCommessa:any;
 
+
+  showModal: boolean = false;
+
   selectCommessa(commessa:any):void{
     this.selectedCommessa=commessa;
+  }
+
+  modal(){
+    this.showModal = !this.showModal;
+    console.log(this.showModal);
   }
 
   ngOnInit() {

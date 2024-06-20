@@ -8,9 +8,9 @@
     </div>
 
     <div class="week-selector">
-        <button (click)="moveToPreviousWeek()">&larr;Previous Week</button>
-        <span>{{ mondayDate | date: 'MMM dd' }} - {{ sundayDate | date: 'MMM dd' }}</span>
-        <button (click)="moveToNextWeek()">Next Week &rarr; </button>
+        <button class="btn round" (click)="moveToPreviousWeek()">&#8249;</button>
+        <span>{{ mondayDate | date: 'MM / dd' }} -- {{ sundayDate | date: 'MM / dd' }}</span>
+        <button class="btn round" (click)="moveToNextWeek()">&#8250;</button>
       </div>
 </div>
 <hr>
