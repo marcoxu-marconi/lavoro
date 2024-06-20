@@ -7,18 +7,43 @@
 .commessa-attivita{
     display: flex;
     flex-direction: row;
+    min-width: calc(30% - 2vw);
+    flex: 1;
+    margin-left:3vw ;
 }
 
-.commessa-attivita{
-    min-width: 30%;
-    flex: 1;
-}
 
 .commessa-attivita h3 {
     margin: 0;
+    margin-bottom: 1vh;
+    text-align: center;
 }
 
 .week{
-    min-width: 70%;
+    min-width: calc(70% - 2vw);
     flex: 1;
+    margin-right: 3vw;
+}
+
+.commessa-item{
+    font-size: larger;
+    margin-bottom: 10px;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    transition: ease-in-out 0.2s;
+}
+.commessa-item:hover{
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.attivita-item{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.selected{
+    background-color: #f0f0f0;
 }

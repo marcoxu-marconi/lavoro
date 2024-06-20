@@ -10,7 +10,7 @@ import { InfoProviderService } from '../../info-provider.service';
 export class TableComponent {
   constructor(private infoService: InfoProviderService) { }
 
-  resList: any = [];
+  ResList: any = [];
   JobList: any = [];
   JobTaskList: any = [];
 
@@ -22,7 +22,7 @@ export class TableComponent {
 
   ngOnInit() {
     this.infoService.getResList().subscribe(data => {
-      this.resList = data;
+      this.ResList = data;
       console.log(data);
     });
     this.infoService.getJobList().subscribe(data => {

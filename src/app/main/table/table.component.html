@@ -3,7 +3,7 @@
     <div style="width: 50%;">
       <h3>Cod commessa</h3>
     @for(commessa of JobList; track commessa){
-      <div (click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
+      <div [class.selected]="commessa === selectedCommessa" class="commessa-item"(click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
     }
     </div>
 
@@ -12,7 +12,7 @@
       @if(selectedCommessa){
         @for(attivita of JobTaskList; track attivita){
           @if(attivita.JobRecordId == selectedCommessa.JobRecordId){
-            <div>{{attivita.Name}}</div>
+            <div class="attivita-item">{{attivita.Name}}</div>
           }
         }
       }
@@ -32,6 +32,14 @@
               <th>Sunday</th>
             </tr>
           </thead>
+          <tbody>
+            <tr>
+              <td>adasd</td>
+              <td>adasd</td>
+              <td>adasd</td>
+              <td>adasd</td>
+              <td>adasd</td>
+            </tr>
     </table>
   </div>
 </div>
