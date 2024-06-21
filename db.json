@@ -64,5 +64,31 @@
         "Number": "4000",
         "Name": "Presenze del personale"
       }
+    ],
+    "WorkWeekList":[
+      {
+        "HeaderFilter":[],
+        "WeekFirstDay": "2021-01-04",
+        "WeekLastDay": "2021-01-10",
+        "Work":[]
+      },
+      {
+        "HeaderFilter":[],
+        "WeekFirstDay": "2021-01-11",
+        "WeekLastDay": "2021-01-17",
+        "Work":[]
+      },
+      {
+        "HeaderFilter":[],
+        "WeekFirstDay": "2021-01-18",
+        "WeekLastDay": "2021-01-24",
+        "Work":[]
+      },
+      {
+        "HeaderFilter":[],
+        "WeekFirstDay": "2021-01-25",
+        "WeekLastDay": "2021-01-31",
+        "Work":[]
+      }
     ]
   }

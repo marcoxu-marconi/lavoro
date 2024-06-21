@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { InfoProviderService } from '../../info-provider.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -11,6 +11,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class TableComponent {
   constructor(private infoService: InfoProviderService) { }
+
+  @Input() WorkWeek: any;
 
   ResList: any = [];
   JobList: any = [];
@@ -38,15 +40,13 @@ export class TableComponent {
   ngOnInit() {
     this.infoService.getResList().subscribe(data => {
       this.ResList = data;
-      console.log(data);
     });
     this.infoService.getJobList().subscribe(data => {
       this.JobList = data;
-      console.log(data);
     });
     this.infoService.getJobTaskList().subscribe(data => {
       this.JobTaskList = data;
-      console.log(data);
     });
+    console.log(this.WorkWeek)
   }
 }

@@ -36,7 +36,14 @@
           </thead>
           <tbody>
             <tr>
-              <td class="tempo-dettaglio"><form [formGroup]="timeForm"><input type="email" formControlName="time" [class.is-valid]="timeForm.controls['time'].valid" [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched"></form><button type="button" class="details">⋮</button></td>
+              <td class="tempo-dettaglio">
+                <form [formGroup]="timeForm">
+                  <input type="email" formControlName="time" 
+                  [class.is-valid]="timeForm.controls['time'].valid" 
+                  [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched">
+                </form>
+                <button type="button" class="details">⋮</button>
+              </td>
               <td>adasd</td>
               <td>adasd</td>
               <td>adasd</td>
@@ -62,4 +69,4 @@
 </dialog>
 
 <button (click)="dialog.showModal()">Show dialog</button>
-
+<button>{{WorkWeek}}</button>

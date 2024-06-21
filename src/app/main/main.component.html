@@ -1,2 +1,2 @@
-<app-nav></app-nav>
-<app-table></app-table>
+<app-nav (weekChange)="receiveWeek($event)"></app-nav>
+<app-table [WorkWeek]="WorkWeekToChild"></app-table>

@@ -10,5 +10,12 @@ import { NavComponent } from './nav/nav.component';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+  WorkWeekToChild:any;
+  constructor() { }
+
+  receiveWeek(event:any){
+    this.WorkWeekToChild=event;
+  }
+
 
 }

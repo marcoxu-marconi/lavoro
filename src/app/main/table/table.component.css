@@ -112,23 +112,20 @@ textarea {
   }
 
 
-  input:focus{
-    outline: none;
-  }
   .is-valid{
-    border: 1px solid green;
+    border: 2px solid green;
   }
  .is-valid:focus{
     outline-color: green;
-    border: 1px solid green;
+    border: 2px solid green;
   }
 
   .is-invalid:focus{
     outline-color: red;
-    border: 1px solid red;
+    border: 2px solid red;
   }
   .is-invalid{
-    border: 1px solid red;
+    border: 2px solid red;
   }
 
 .details{

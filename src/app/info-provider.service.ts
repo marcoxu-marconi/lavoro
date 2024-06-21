@@ -22,5 +22,9 @@ export class InfoProviderService {
     return this.http.get<any>('http://localhost:3000/JobTaskList');
   }
 
+  getWorkWeekList(): Observable<any> {
+    return this.http.get<any>('http://localhost:3000/WorkWeekList');
+  }
+
 }
 
