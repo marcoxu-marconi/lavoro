@@ -70,7 +70,18 @@
         "HeaderFilter":[],
         "WeekFirstDay": "2021-01-04",
         "WeekLastDay": "2021-01-10",
-        "Work":[]
+        "Work":[
+          {
+          "WeekWorkJournalRecordId" :"dasddasad",
+          "JobRecordId": "AAA-AAA",
+          "JobTaskRecordId": "31925e5d-3e2a-494e-b947-7bef08086e9b",
+          "PersonRecordId": "AAA-AAA",
+          "MondayDate": "2021-01-04",
+          "MondayUnits" :7.5,
+          "MondayUnitOfMesure": "G",
+          "MondayNote": "CiaoWella"
+          }
+        ]
       },
       {
         "HeaderFilter":[],

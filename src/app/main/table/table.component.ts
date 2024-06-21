@@ -17,7 +17,6 @@ export class TableComponent {
   ResList: any = [];
   JobList: any = [];
   JobTaskList: any = [];
-
   selectedCommessa:any;
 
   showModal: boolean = false;

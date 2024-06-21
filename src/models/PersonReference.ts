@@ -20,20 +20,20 @@ export class PersonReference {
 
 
 //forse unpo di errore qua
-export class WeekWorkJournal {
+export class WeekWorkJournal {  // un WeekWorkJournal è una riga
     WeekWorkJournalRecordId: string = '';
     JobRecordId: string = '';
     JobTaskRecordId: string = '';
     PersonRecordId: string = '';
     MondayDate: Date = new Date('1753-01-01'); //Lunedì
-    MondayUnits: number = 0;
+    MondayUnits: number = 0; // ore di lavoro
     MondayUnitOfMesure: string = 'G'; // giorni
     MondayNote: string = '';
     TuesdayDate: Date = new Date('1753-01-01'); //Martedì
     TuesdayUnits: number = 0;
     TuesdayUnitOfMesure: string = 'G'; // giorni
     TuesdayNote: string = '';
-   /*  WednesdayDate: Date = new Date('1753-01-01'); //Mercoledì
+    WednesdayDate: Date = new Date('1753-01-01'); //Mercoledì
     WednesdayUnits: number = 0;
     WednesdayUnitOfMesure: string = 'G'; // giorni
     WednesdayNote: string = '';
@@ -52,7 +52,7 @@ export class WeekWorkJournal {
     SundayDate: Date = new Date('1753-01-01'); //Domenica
     SundayUnits: number = 0;
     SundayUnitOfMesure: string = 'G'; // giorni
-    SundayNote: string = ''; */
+    SundayNote: string = '';
 }
 
 export class WorkWeek {
