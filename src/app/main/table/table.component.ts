@@ -21,6 +21,7 @@ export class TableComponent {
 
   showModal: boolean = false;
 
+  Days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   timeForm = new FormGroup({
     time: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{1,2}(\\.25|\\.50|\\.75|\\.00)?$')]),

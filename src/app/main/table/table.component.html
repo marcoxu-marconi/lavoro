@@ -39,16 +39,22 @@
 
             @for( row of selectedWeek.Work; track row){
             <tr>
-              
+             <!--  @for(day of Days; track day){
               <td class="tempo-dettaglio">
                 <form [formGroup]="timeForm">
                   <input type="text" formControlName="time"
                   [class.is-valid]="timeForm.controls['time'].valid" 
                   [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched">
                 </form>
-                <div>{{row.MondayUnits}} </div>
+                <div>{{row[day+'Units']}} </div>
                 <button type="button" class="details">⋮</button>
               </td>
+            } -->
+              @for (day of Days; track day){
+                <td>{{day}}</td>
+              }
+              
+              
             </tr>
           }
           </tbody>
