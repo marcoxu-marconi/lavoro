@@ -33,6 +33,7 @@
     padding-right: 3px;
     padding-bottom: 3px;
     transition: ease-in-out 0.2s;
+    text-align: center;
 }
 .commessa-item:hover{
     cursor: pointer;
@@ -90,3 +91,44 @@ textarea {
     display: flex;
     justify-content: flex-end;
   }
+
+  hr{
+    /* margin-left: 0; */
+    width: 80%;
+    text-align: start;
+  }
+  hr:last-child {
+    display: none;
+  }
+
+  .tempo-dettaglio{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+  .tempo-dettaglio input{
+    width: 70%;
+    margin-left: 1em;
+  }
+
+
+  input:focus{
+    outline: none;
+  }
+  .is-valid{
+    border: 1px solid green;
+  }
+ .is-valid:focus{
+    outline-color: green;
+    border: 1px solid green;
+  }
+
+  .is-invalid:focus{
+    outline-color: red;
+    border: 1px solid red;
+  }
+  .is-invalid{
+    border: 1px solid red;
+  }
+
+

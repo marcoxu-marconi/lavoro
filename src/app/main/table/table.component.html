@@ -4,6 +4,7 @@
       <h3>Cod commessa</h3>
     @for(commessa of JobList; track commessa){
       <div [class.selected]="commessa === selectedCommessa" class="commessa-item"(click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
+      <hr>
     }
     </div>
 
@@ -13,6 +14,7 @@
         @for(attivita of JobTaskList; track attivita){
           @if(attivita.JobRecordId == selectedCommessa.JobRecordId){
             <div class="attivita-item">{{attivita.Name}}</div>
+            <hr>
           }
         }
       }
@@ -34,7 +36,8 @@
           </thead>
           <tbody>
             <tr>
-              <td (click)="modal()">adasds</td>
+              <td class="tempo-dettaglio"><form [formGroup]="timeForm"><input type="email" formControlName="time" [class.is-valid]="timeForm.controls['time'].valid" [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched"></form><button type="button">⋮</button></td>
+              <td>adasd</td>
               <td>adasd</td>
               <td>adasd</td>
               <td>adasd</td>
@@ -59,3 +62,4 @@
 </dialog>
 
 <button (click)="dialog.showModal()">Show dialog</button>
+
