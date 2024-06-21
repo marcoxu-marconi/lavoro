@@ -31,6 +31,10 @@ export class TableComponent {
     console.log(this.timeForm.controls['time'].valid);
   }
 
+
+  showWorkWeek(): void {
+    console.log(this.WorkWeek);
+  }
 /*   modal(){
     this.showModal = !this.showModal;
     console.log(this.showModal);
@@ -46,6 +50,5 @@ export class TableComponent {
     this.infoService.getJobTaskList().subscribe(data => {
       this.JobTaskList = data;
     });
-    console.log(this.WorkWeek)
   }
 }
