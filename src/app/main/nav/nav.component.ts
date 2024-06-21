@@ -14,7 +14,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class NavComponent implements OnInit{
   
-@Output() weekChange = new EventEmitter<WorkWeek>();
+@Output() selectedWeek = new EventEmitter<WorkWeek>();
 
 
 constructor(private infoService: InfoProviderService) { }
@@ -28,7 +28,7 @@ currentWeek=0;
     if(this.currentWeek<this.data.length-1){
       this.currentWeek++;
       this.setWeekDay();
-      this.currentWeek=0;
+      this.selectedWeek.emit(this.data[this.currentWeek]);
     }
   }
   
@@ -37,6 +37,7 @@ currentWeek=0;
     if(this.currentWeek>0){
       this.currentWeek--;
       this.setWeekDay();
+      this.selectedWeek.emit(this.data[this.currentWeek]);
     }
   }
 
@@ -50,8 +51,9 @@ currentWeek=0;
   ngOnInit() {
     this.infoService.getWorkWeekList().subscribe(data => {
       this.data = data;
+      this.currentWeek = 0;
       this.setWeekDay();
-      this.weekChange.emit(data);
+      this.selectedWeek.emit(data[this.currentWeek]);
     });
 
     

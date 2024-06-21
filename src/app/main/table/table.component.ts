@@ -12,7 +12,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class TableComponent {
   constructor(private infoService: InfoProviderService) { }
 
-  @Input() WorkWeek: any;
+  @Input() selectedWeek: any;
 
   ResList: any = [];
   JobList: any = [];
@@ -33,7 +33,7 @@ export class TableComponent {
 
 
   showWorkWeek(): void {
-    console.log(this.WorkWeek);
+    console.log(this.selectedWeek);
   }
 /*   modal(){
     this.showModal = !this.showModal;
