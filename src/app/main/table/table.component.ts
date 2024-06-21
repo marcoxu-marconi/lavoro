@@ -34,6 +34,7 @@ export class TableComponent {
 
   showWorkWeek(): void {
     console.log(this.selectedWeek);
+    console.log(this.selectedWeek.Work);
   }
 /*   modal(){
     this.showModal = !this.showModal;

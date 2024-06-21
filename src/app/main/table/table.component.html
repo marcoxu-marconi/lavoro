@@ -37,8 +37,9 @@
           <tbody>
         
 
-            
+            @for( row of selectedWeek.Work; track row){
             <tr>
+              
               <td class="tempo-dettaglio">
                 <form [formGroup]="timeForm">
                   <input type="text" formControlName="time"
@@ -48,6 +49,7 @@
                 <button type="button" class="details">⋮</button>
               </td>
             </tr>
+          }
           </tbody>
 
 
