@@ -37,7 +37,7 @@
           <tbody>
         
 
-            @for( row of selectedWeek.Work; track row){
+            @for(row of selectedWeek.Work; track row){
               <!-- @if((row.JobTaskRecordId == selectedAttivita.JobTaskRecordId 
               && row.JobRecordId == selectedCommessa.JobRecordId) || (blahblah == null? && blahblah == null) ) -->
               @if(row.JobTaskRecordId == selectedAttivita.JobTaskRecordId 
@@ -52,7 +52,7 @@
                         [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched">
                       </form>
                       <div>{{row[day+'Units']}} </div>
-                      <button type="button" class="details">⋮</button>
+                      <button type="button" class="details" (click)="openDialog(row,day)">⋮</button>
                       <!-- per far vedere dettaglio di ogni cell, forse serve una 
                       logica di WeekWorkJournalRecordId, per non confondere le righe
                         -->
@@ -74,7 +74,7 @@
   <div class="dialog-content-up">
     <h2>Data</h2>
     <form>
-      <textarea placeholder="Write your note here"></textarea>
+      <textarea placeholder="Write your note here">{{note}}</textarea>
     </form>
   </div>
   

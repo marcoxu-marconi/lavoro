@@ -19,7 +19,7 @@ export class TableComponent {
   JobTaskList: any = [];
   selectedCommessa:any;
   selectedAttivita:any;
-  showModal: boolean = false;
+  note: string = '';
 
   Days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
@@ -45,6 +45,12 @@ export class TableComponent {
     console.log(this.showModal);
   }
  */
+
+  openDialog(row: any, day: any) {
+  this.note = row[`${day}Note`];
+  this.note = "weo rf"
+  }
+
   ngOnInit() {
     this.infoService.getResList().subscribe(data => {
       this.ResList = data;
