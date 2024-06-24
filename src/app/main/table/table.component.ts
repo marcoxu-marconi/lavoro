@@ -18,7 +18,7 @@ export class TableComponent {
   JobList: any = [];
   JobTaskList: any = [];
   selectedCommessa:any;
-
+  selectedAttivita:any;
   showModal: boolean = false;
 
   Days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -30,6 +30,9 @@ export class TableComponent {
   selectCommessa(commessa:any):void{
     this.selectedCommessa=commessa;
     console.log(this.timeForm.controls['time'].valid);
+  }
+  selectAttivita(attivita:any):void{
+    this.selectedAttivita=attivita;
   }
 
 
