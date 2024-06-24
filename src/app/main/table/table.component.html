@@ -38,28 +38,27 @@
         
 
             @for( row of selectedWeek.Work; track row){
-            <tr>
-              
-              @for(day of Days; track day){
-              <td>
-                <div class="tempo-dettaglio">
-                <form [formGroup]="timeForm">
-                  <input type="text" formControlName="time"
-                  [class.is-valid]="timeForm.controls['time'].valid" 
-                  [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched">
-                </form>
-                <div>{{row[day+'Units']}} </div>
-                <button type="button" class="details">⋮</button>
-                <!-- per far vedere dettaglio di ogni cell, forse serve una 
-                 logica di WeekWorkJournalRecordId, per non confondere le righe
-                  -->
-                </div>
-              </td>
-            }  
-            
-              
-              
-            </tr>
+              @if(row.JobTaskRecordId == selectedAttivita.JobTaskRecordId 
+              && row.JobRecordId == selectedCommessa.JobRecordId ){
+                <tr>
+                  @for(day of Days; track day){
+                    <td>
+                      <div class="tempo-dettaglio">
+                      <form [formGroup]="timeForm">
+                        <input type="text" formControlName="time"
+                        [class.is-valid]="timeForm.controls['time'].valid" 
+                        [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched">
+                      </form>
+                      <div>{{row[day+'Units']}} </div>
+                      <button type="button" class="details">⋮</button>
+                      <!-- per far vedere dettaglio di ogni cell, forse serve una 
+                      logica di WeekWorkJournalRecordId, per non confondere le righe
+                        -->
+                      </div>
+                    </td>
+                  }  
+                </tr>
+          }
           }
           </tbody>
 
