@@ -52,7 +52,7 @@
                         [class.is-invalid]="!timeForm.controls['time'].valid && timeForm.controls['time'].touched">
                       </form>
                       <div>{{row[day+'Units']}} </div>
-                      <button type="button" class="details" (click)="openDialog(row,day)">⋮</button>
+                      <button type="button" class="details" (click)="openModal(row, day);">⋮</button>
                       <!-- per far vedere dettaglio di ogni cell, forse serve una 
                       logica di WeekWorkJournalRecordId, per non confondere le righe
                         -->
@@ -63,25 +63,24 @@
           }
           }
           </tbody>
-
-
     </table>
   </div>
 </div>
 
-
-<dialog #dialog>
-  <div class="dialog-content-up">
-    <h2>Data</h2>
-    <form>
-      <textarea placeholder="Write your note here">{{note}}</textarea>
-    </form>
+@if(showModal == true){
+<div class="modal-overlay">
+  <div class="modal">
+    <div class="dialog-content-up">
+      <h2>Data</h2>
+      <form>
+        <textarea placeholder="Write your note here" >{{note}}</textarea>
+      </form>
+    </div>
+    
+    <div class="dialog-content-bottom">
+      <button (click)="closeModal()">OK</button>
+    </div>
   </div>
-  
-  <div class="dialog-content-bottom">
-    <button (click)="dialog.close()">OK</button>
-  </div>
-</dialog>
-
-<button (click)="dialog.showModal()">Show dialog</button>
-<button (click)="showWorkWeek()"></button>
+</div>
+}
+<!-- <button (click)="dialog.showModal()">Show dialog</button> -->

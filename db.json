@@ -79,11 +79,11 @@
         "MondayDate": "2021-01-04",
         "MondayUnits": 8,
         "MondayUnitOfMesure": "G",
-        "MondayNote": "lolporcodio",
+        "MondayNote": "Amonda",
         "TuesdayDate": "2021-01-05",
         "TuesdayUnits": 8,
         "TuesdayUnitOfMesure": "G",
-        "TuesdayNote": "lolporcodio"
+        "TuesdayNote": "ATUeseday"
        },
        {
         "WeekWorkJournalRecordId": "AAA-AAA",
@@ -93,11 +93,11 @@
         "MondayDate": "2021-01-04",
         "MondayUnits": 7,
         "MondayUnitOfMesure": "G",
-        "MondayNote": "lolporcodio",
+        "MondayNote": "BMONDAY",
         "TuesdayDate": "2021-01-05",
         "TuesdayUnits": 8,
         "TuesdayUnitOfMesure": "G",
-        "TuesdayNote": "lolporcodio"
+        "TuesdayNote": "BTuesDAY"
        }
         ]
       },

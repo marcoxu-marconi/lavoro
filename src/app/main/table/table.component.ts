@@ -2,10 +2,12 @@ import { Component, Input } from '@angular/core';
 import { InfoProviderService } from '../../info-provider.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,FormsModule,CommonModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
@@ -19,7 +21,9 @@ export class TableComponent {
   JobTaskList: any = [];
   selectedCommessa:any;
   selectedAttivita:any;
-  note: string = '';
+  note!: string;
+
+  showModal: boolean = false;
 
   Days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
@@ -36,19 +40,12 @@ export class TableComponent {
   }
 
 
-  showWorkWeek(): void {
-    console.log(this.selectedWeek);
-    console.log(this.selectedWeek.Work);
-  }
-/*   modal(){
-    this.showModal = !this.showModal;
-    console.log(this.showModal);
-  }
- */
-
-  openDialog(row: any, day: any) {
+  openModal(row: any, day: any) {
   this.note = row[`${day}Note`];
-  this.note = "weo rf"
+  this.showModal = true;
+  }
+  closeModal() {
+  this.showModal = false;
   }
 
   ngOnInit() {
