@@ -87,8 +87,8 @@
        },
        {
         "WeekWorkJournalRecordId": "AAA-AAA",
-        "JobRecordId":"AAA-AAA",
-        "JobTaskRecordId":"31925e5d-3e2a-494e-b947-7bef08086e9b",
+        "JobRecordId":"AAA-BBB",
+        "JobTaskRecordId":"5d4d45ad-fef3-4a43-8c95-8ff032d2f2b1",
         "PersonRecordID":"AAA-AAA",
         "MondayDate": "2021-01-04",
         "MondayUnits": 7,

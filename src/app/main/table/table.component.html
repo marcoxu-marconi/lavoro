@@ -38,6 +38,8 @@
         
 
             @for( row of selectedWeek.Work; track row){
+              <!-- @if((row.JobTaskRecordId == selectedAttivita.JobTaskRecordId 
+              && row.JobRecordId == selectedCommessa.JobRecordId) || (blahblah == null? && blahblah == null) ) -->
               @if(row.JobTaskRecordId == selectedAttivita.JobTaskRecordId 
               && row.JobRecordId == selectedCommessa.JobRecordId ){
                 <tr>
