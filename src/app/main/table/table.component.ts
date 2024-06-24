@@ -44,6 +44,7 @@ export class TableComponent {
   this.note = row[`${day}Note`];
   this.showModal = true;
   }
+  
   closeModal() {
   this.showModal = false;
   }
