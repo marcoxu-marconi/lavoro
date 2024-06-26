@@ -1,23 +1,32 @@
 <div class="container">
   <div class="commessa-attivita">
-    <div style="width: 50%;">
+    <div style="width: 50%;" class="pop">
       <h3>Cod commessa</h3>
+      <select #commesse [(ngModel)]="selectedCommessa">
+        <option disabled selected value>Scegliere una commessa</option>
     @for(commessa of JobList; track commessa){
-      <div [class.selected]="commessa === selectedCommessa" class="commessa-attivita-item" (click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
-      <hr>
+      <!-- <div [class.selected]="commessa === selectedCommessa" class="commessa-attivita-item" (click)="selectCommessa(commessa)" >{{commessa.Name}}</div>
+      <hr> -->
+      <option [ngValue]="commessa">{{commessa.Name}}</option>
     }
+      </select>
     </div>
 
-    <div style="width: 50%;">
+    <div style="width: 50%;" class="pop">
       <h3>Cod attivita</h3>
+      <select #attivita [(ngModel)]="selectedAttivita">
+        <option disabled selected value>Scegliere un'attivita</option>
       @if(selectedCommessa){
         @for(attivita of JobTaskList; track attivita){
           @if(attivita.JobRecordId == selectedCommessa.JobRecordId){
-            <div  [class.selected]="attivita === selectedAttivita" class="commessa-attivita-item" (click)="selectAttivita(attivita)">{{attivita.Name}}</div>
-            <hr>
+            <!-- <div  [class.selected]="attivita === selectedAttivita" class="commessa-attivita-item" (click)="selectAttivita(attivita)">{{attivita.Name}}</div>
+            <hr> -->
+            <option [ngValue]="attivita">{{attivita.Name}}</option>
           }
         }
+        
       }
+    </select>
     </div>
   </div>
 
@@ -36,12 +45,13 @@
           </thead>
           <tbody>
         
-
+           
             @for(row of selectedWeek.Work; track row){
               <!-- @if((row.JobTaskRecordId == selectedAttivita.JobTaskRecordId 
               && row.JobRecordId == selectedCommessa.JobRecordId) || (blahblah == null? && blahblah == null) ) -->
-              @if(row.JobTaskRecordId == selectedAttivita.JobTaskRecordId 
-              && row.JobRecordId == selectedCommessa.JobRecordId ){
+            @if(selectedCommessa && selectedAttivita){
+              @if(row.JobRecordId == selectedCommessa.JobRecordId 
+              && row.JobTaskRecordId == selectedAttivita.JobTaskRecordId ){
                 <tr>
                   @for(day of Days; track day){
                     <td>
@@ -62,6 +72,7 @@
                 </tr>
           }
           }
+        }
           </tbody>
     </table>
   </div>
@@ -84,3 +95,6 @@
 </div>
 }
 <!-- <button (click)="dialog.showModal()">Show dialog</button> -->
+
+
+<button (click)="showData()"></button>

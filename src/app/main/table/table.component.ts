@@ -31,14 +31,14 @@ export class TableComponent {
     time: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{1,2}(\\.25|\\.50|\\.75|\\.00)?$')]),
   });
 
-  selectCommessa(commessa:any):void{
+/*   selectCommessa(commessa:any):void{
     this.selectedCommessa=commessa;
     console.log(this.timeForm.controls['time'].valid);
   }
   selectAttivita(attivita:any):void{
     this.selectedAttivita=attivita;
   }
-
+ */
 
   openModal(row: any, day: any) {
   this.note = row[`${day}Note`];
@@ -47,6 +47,11 @@ export class TableComponent {
   
   closeModal() {
   this.showModal = false;
+  }
+
+  showData(){
+    console.log(this.selectedCommessa);
+    console.log(this.selectedAttivita);
   }
 
   ngOnInit() {
